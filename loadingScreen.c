@@ -11,9 +11,10 @@ void loadingScreen(){
     int i;
     int prec[] = {25, 50, 75, 100};
 
-    printf("*****************************\n");
-    printf("******* Ucitavanje **********\n");
-    printf("*****************************\n\n");
+    printf("\t*****************************\n");
+    printf("\t******* Ucitavanje **********\n");
+    printf("\t*****************************\n\n");
+    printf("\t");
 
     for(i = 0; i < 5; i++){
 
@@ -23,8 +24,9 @@ void loadingScreen(){
     }
 
     system("cls");
-
-    printf("\tUcitavanje uspjesno, program se pokrece");
-    sleep(1);
+    printf("\t*******************************************\n");
+    printf("\t* Ucitavanje uspjesno, program se pokrece *\n");
+    printf("\t*******************************************");
+    sleep(2);
     system("cls");
 }

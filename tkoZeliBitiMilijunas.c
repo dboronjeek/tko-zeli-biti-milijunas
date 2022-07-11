@@ -6,13 +6,15 @@
 
 #include "menu.c"
 #include "loadingScreen.c"
+#include "program.c"
 
 int main(){
 
     int choice;
 
-    loadingScreen();
-    menu(choice);
+    openFirstQuestionsFile();
+    //loadingScreen();
+    //menu(choice);
     
     return 0;
 }
