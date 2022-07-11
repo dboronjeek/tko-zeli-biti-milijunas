@@ -4,20 +4,45 @@
 #include <Windows.h>
 #include <unistd.h>
 
-char openFirstQuestionsFile(){
+typedef struct firstQuestionPossiblitiy{
+    
+    char questionOne[250];
+    char ansAOne[50];
+    char ansBOne[50];
+    char ansCOne[50];
+    char ansDOne[50];
 
+}FIRST;
+
+typedef struct secondQuestionPossiblitiy{
+    
+    char questionOne[250];
+    char ansAOne[50];
+    char ansBOne[50];
+    char ansCOne[50];
+    char ansDOne[50];
+
+}SECOND;
+
+typedef struct thirdQuestionPossiblitiy{
+    
+    char questionOne[250];
+    char ansAOne[50];
+    char ansBOne[50];
+    char ansCOne[50];
+    char ansDOne[50];
+
+}THIRD;
+
+
+
+char openFirstQuestionsFile(){
+    
     FILE *fp = NULL;
     const char *fileName = "1.txt";
 
     fp = fopen(fileName, "r");
 
-    if(fp == NULL) printf("Error, datoteka ne postoji!");
-    //else printf("Datoteka postoji");
-
-    int id;
-    char questions[250] = {'\0'}, ansA[50] = {'\0'}, ansB[50] = {'\0'}, ansC[50] = {'\0'}, ansD[50] = {'\0'};
-
-    fscanf(fp, "%d %s")
-    fclose(fp);
+    
 
 }

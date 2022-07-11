@@ -12,9 +12,12 @@ int main(){
 
     int choice;
 
-    openFirstQuestionsFile();
-    //loadingScreen();
-    //menu(choice);
+    char c;
+    scanf("%c", &c);
+    system("cls");
+
+    loadingScreen();
+    menu(choice);
     
     return 0;
 }
