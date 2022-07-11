@@ -2,11 +2,14 @@
 #include <stdlib.h>
 #include <time.h>
 #include <Windows.h>
+#include <unistd.h>
+#include <string.h>
 
+#include "program.c"
 
 int menu(int choice){
 
-    
+    choice = 0;
     system("cls");
 
     do{
@@ -36,6 +39,8 @@ int menu(int choice){
             case 1:
                     //Pokreni igru
                     system("cls");
+                    openQuestionsFile();
+                    
             break;
 
             case 2:
@@ -51,11 +56,17 @@ int menu(int choice){
             break;
 
             default:
-                    system("cls");    
-                    printf("Krivi odabir ponovi unos\n\n");
+                    system("cls");
+                    printf("**********************************\n");   
+                    printf("**** Krivi odabir ponovi unos ****\n");
+                    printf("**********************************\n");  
+                    sleep(2);
+                    system("cls");
             break;
         }
 
-    }while(choice != 3);
+        if(choice == 1 ||choice == 2 || choice == 3) break;
+
+    }while(choice > 1 || choice < 3);
     return 0;
 }

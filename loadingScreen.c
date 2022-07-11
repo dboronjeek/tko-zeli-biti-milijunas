@@ -3,14 +3,14 @@
 #include <time.h>
 #include <Windows.h>
 #include <unistd.h>
+#include <string.h>
 
 void loadingScreen(){
 
     system("cls");
 
     int i;
-    int prec[] = {25, 50, 75, 100};
-
+    
     printf("\t*****************************\n");
     printf("\t******* Ucitavanje **********\n");
     printf("\t*****************************\n\n");
@@ -19,14 +19,14 @@ void loadingScreen(){
     for(i = 0; i < 5; i++){
 
         printf(" [|]  ");
-        sleep(1);
+        usleep(500000);
 
     }
 
     system("cls");
-    printf("\t*******************************************\n");
-    printf("\t* Ucitavanje uspjesno, program se pokrece *\n");
-    printf("\t*******************************************");
+    printf("\t********************************************\n");
+    printf("\t*** Ucitavanje uspjesno, igra se pokrece ***\n");
+    printf("\t********************************************");
     sleep(2);
     system("cls");
 }

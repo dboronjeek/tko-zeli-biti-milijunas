@@ -3,20 +3,20 @@
 #include <stdlib.h>
 #include <Windows.h>
 #include <unistd.h>
+#include <string.h>
 
 #include "menu.c"
 #include "loadingScreen.c"
-#include "program.c"
 
 int main(){
 
     int choice;
 
-    char c;
-    scanf("%c", &c);
+    //char c;
+    //scanf("%c", &c);
     system("cls");
 
-    loadingScreen();
+    //loadingScreen();
     menu(choice);
     
     return 0;
