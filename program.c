@@ -23,151 +23,242 @@ void firstQuestion(int);
 int randNumber(int);
 int questRead(int);
 
-char QFF2(int scoreNumber);
+void scoreTable(SCORE s){
+    
+    
+    int money[] = {
+        100, 200, 300, 500, 1000,
+        2000, 4000, 8000, 16000, 32000,
+        64000, 1250000, 250000, 500000, 1000000
+    };
+
+    printf("Unesi svoj nadimak (ne vise od 10 znakova): ");
+    gets(s.nickname);
+    gets(s.nickname);
+
+    FILE* fp = NULL;
+    fp = fopen("score.txt", "a");
+
+    if(s.scoreNumber == -1){
+        fprintf(fp, "%s - 0 HRK\n", s.nickname);
+    }
+
+    else{
+        fprintf(fp, "%s - %d HRK\n", s.nickname, money[s.scoreNumber]);
+    }
+    
+    fclose(fp);
+
+    system("cls");
+    int a = 0;
+    menu(a);
+}
+
+void seeScoreTable(){
+    
+    char score[1024];
+    FILE* fp = NULL;
+    char ans[2];
+    char da[] = {"da"};
+
+    printf("********************* 'SCORE' TABLICA *********************\n");
+    fp = fopen("score.txt", "r");
+
+    while (fgets(score, 1024, fp) != NULL){
+        
+        printf("%s", score);
+    }
+    printf("\n***********************************************************");
+    fclose(fp);
+
+    printf("\nPovratak u izbornik (da/ne): ");
+    gets(ans);
+    gets(ans);
+
+    if(strcmp(da, ans) == 0){
+        menu(ans);
+    }
+
+    else exit(0);
+}
+char QFF2();
 
 //PRVO PITANJE
 char openFirstQuestionsFile(){
-
+    
+    SCORE s;
+    s.scoreNumber = -1;
     int r;
-    int scoreNumber = 1;
     system("cls");
     sleep(1);
-    flushall
-        r = randNumber(r);
-        char ans;
+        
+    r = randNumber(r);
+    char ans;
                 
       
-            if(r == 1){
-                printLogo();
-                questRead(1);
-                questRead(2);
-                questRead(3);
+    if(r == 1){
+        printLogo();
+        questRead(1);
+        questRead(2);
+        questRead(3);
             
-                printf("Vas odgovor: ");
-                scanf(" %c", &ans);
-                if(ans == 'a' || ans == 'A'){
-                    system("cls");
-                    printf("Tocan odgovor, osvojili ste 100 HRK");
-                }
-                else{
-                    system("cls");
-                    printf("Krivi odgovor, osvojili ste 0 HRK");
-                    exit(0);
-                }
-            }
+        printf("Vas odgovor: ");
+        scanf(" %c", &ans);
+
+        if(ans == 'a' || ans == 'A'){
+            system("cls");
+            printf("Tocan odgovor, osvojili ste 100 HRK");
+        }
+
+        else{
+            system("cls");
+            printf("Krivi odgovor, osvojili ste 0 HRK");
+            sleep(1);
+            system("cls");
+            scoreTable(s);
+        }
+    }
             
-            else if(r == 2){
-                printLogo();
-                questRead(5);
-                questRead(6);
-                questRead(7);
+    else if(r == 2){
+        printLogo();
+        questRead(5);
+        questRead(6);
+        questRead(7);
             
-                printf("Vas odgovor: ");
-                scanf(" %c", &ans);
-                if(ans == 'b' || ans == 'B'){
-                    system("cls");
-                    printf("Tocan odgovor, osvojili ste 100 HRK");
-                    char QFF2();
-                }
-                else{
-                    system("cls");
-                    printf("Krivi odgovor, osvojili ste 0 HRK");
-                    exit(0);
-                }
-            }
+        printf("Vas odgovor: ");
+        scanf(" %c", &ans);
+                
+        if(ans == 'b' || ans == 'B'){
+            system("cls");
+            printf("Tocan odgovor, osvojili ste 100 HRK");
+            char QFF2();
+
+        }
+
+        else{
+            system("cls");
+            printf("Krivi odgovor, osvojili ste 0 HRK");
+            sleep(1);
+            system("cls");
+            scoreTable(s);
+        }
+    }
 
 
       
-            else if(r == 3){
-                printLogo();
-                questRead(9);
-                questRead(10);
-                questRead(11);
+    else if(r == 3){
+        printLogo();
+        questRead(9);
+        questRead(10);
+        questRead(11);
             
-                printf("Vas odgovor: ");
-                scanf(" %c", &ans);
-                if(ans == 'd' || ans == 'D'){
-                    system("cls");
-                    printf("Tocan odgovor, osvojili ste 100 HRK");
-                    char QFF2();
-                }
-                else{
-                    system("cls");
-                    printf("Krivi odgovor, osvojili ste 0 HRK");
-                    exit(0);
-                }
-            }
+        printf("Vas odgovor: ");
+        scanf(" %c", &ans);
+
+        if(ans == 'd' || ans == 'D'){
+            system("cls");
+            printf("Tocan odgovor, osvojili ste 100 HRK");
+            char QFF2();
         }
+            
+        else{
+            system("cls");
+            printf("Krivi odgovor, osvojili ste 0 HRK");
+            sleep(2);
+            system("cls");
+            scoreTable(s);
+            }
+    }
+}
 //PRVO PITANJE 
 
 //DRUGO PITANJE
 char QFF2(){
     
-    int scoreNumber = 2;
+    SCORE s;
+    s.scoreNumber = -1;
     int r;
+    //int scoreNumber = -1;
     system("cls");
     sleep(1);
-    flushall
-        r = randNumber(r);
-        char ans;
+        
+    r = randNumber(r);
+    char ans;
                 
       
-            if(r == 1){
-                printLogo();
-                questRead(13);
-                questRead(14);
-                questRead(15);
+    if(r == 1){
+        printLogo();
+        questRead(1);
+        questRead(2);
+        questRead(3);
             
-                printf("Vas odgovor: ");
-                scanf(" %c", &ans);
-                if(ans == 'a' || ans == 'A'){
-                    system("cls");
-                    printf("Tocan odgovor, osvojili ste 200 HRK");
-                }
-                else{
-                    system("cls");
-                    printf("Krivi odgovor, osvojili ste 100 HRK");
-                    exit(0);
-                }
-            }
+        printf("Vas odgovor: ");
+        scanf(" %c", &ans);
+
+        if(ans == 'a' || ans == 'A'){
+            system("cls");
+            printf("Tocan odgovor, osvojili ste 100 HRK");
+        }
+
+        else{
+            system("cls");
+            printf("Krivi odgovor, osvojili ste 0 HRK");
+            sleep(2);
+            system("cls");
+            scoreTable(s);
+        }
+    }
             
-            else if(r == 2){
-                printLogo();
-                questRead(17);
-                questRead(18);
-                questRead(19);
+    else if(r == 2){
+        printLogo();
+        questRead(5);
+        questRead(6);
+        questRead(7);
             
-                printf("Vas odgovor: ");
-                scanf(" %c", &ans);
-                if(ans == 'c' || ans == 'C'){
-                    system("cls");
-                    printf("Tocan odgovor, osvojili ste 200 HRK");
-                }
-                else{
-                    system("cls");
-                    printf("Krivi odgovor, osvojili ste 100 HRK");
-                    exit(0);
-                }
-            }
+        printf("Vas odgovor: ");
+        scanf(" %c", &ans);
+                
+        if(ans == 'b' || ans == 'B'){
+            system("cls");
+            printf("Tocan odgovor, osvojili ste 100 HRK");
+            char QFF2();
+
+        }
+
+        else{
+            system("cls");
+            printf("Krivi odgovor, osvojili ste 0 HRK");
+            sleep(1);
+            system("cls");
+            scoreTable(s);
+        }
+    }
+
+
       
-            else if(r == 3){
-                printLogo();
-                questRead(21);
-                questRead(22);
-                questRead(23);
+    else if(r == 3){
+        printLogo();
+        questRead(9);
+        questRead(10);
+        questRead(11);
             
-                printf("Vas odgovor: ");
-                scanf(" %c", &ans);
-                if(ans == 'b' || ans == 'B'){
-                    system("cls");
-                    printf("Tocan odgovor, osvojili ste 200 HRK");
-                }
-                else{
-                    system("cls");
-                    printf("Krivi odgovor, osvojili ste 100 HRK");
-                    exit(0);
-                }
+        printf("Vas odgovor: ");
+        scanf(" %c", &ans);
+
+        if(ans == 'd' || ans == 'D'){
+            system("cls");
+            printf("Tocan odgovor, osvojili ste 100 HRK");
+            char QFF2();
+        }
+            
+        else{
+            system("cls");
+            printf("Krivi odgovor, osvojili ste 0 HRK");
+            sleep(1);
+            system("cls");
+            scoreTable(s);
             }
+    }
 }
 //DRUGO PITANJE
     
@@ -219,10 +310,4 @@ int questRead(int lineNumber){
     
     return 0;
     }
-}
-
-
-int scoreTable(){
-
-
 }

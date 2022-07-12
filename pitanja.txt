@@ -11,7 +11,7 @@ A: 28                   B: 29
 C: 30                   D: 31
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 2. Koji je glumac osvojio najboljeg glumca Oscara za filmove Philadelphia (1993) i Forrest Gump (1994)?
-A: Tom Hanks		B: Chris Hemsworth
+A: Tom Hanks		    B: Chris Hemsworth
 C: Daniel Brühl         D: Frank Capra
 
 2. Koje je godine Titanik potonuo u Atlantski ocean 15. travnja, djevicanskim putovanjem iz Southamptona? 
@@ -20,7 +20,7 @@ C: 1912                 D: 1911
 
 2. Koji je jedini planet u Suncevom sustavu koji nije dobio ime po grckom bogu ili bozici?
 A: Mars                 B: Zemlja
-C: Venera		D: Jupiter
+C: Venera		        D: Jupiter
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 3. Koliko je potrebno da sunceva svjetlost dosegne Zemlju? 
 A: 8 sekundi         B: 8 godina
@@ -28,7 +28,7 @@ C: 8 sati            D: 8 stotinki
 
 3. Koji element cini 92% sunca?
 A: Dusik             B: Kisik
-C: Vodik	     D: Helij
+C: Vodik	         D: Helij
 
 3. Tko je prva osoba koja je putovala u svemir 1961. godine?
 A: Jurij Romanenko   B: Jurij Glaskov
@@ -43,7 +43,7 @@ A: Hyundai           B: Samsung
 C: Huawei            D: Kia
 
 4. Koliko srca ima hobotnica?
-A: 3		     B: 2
+A: 3		         B: 2
 C: 5                 D: 1
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 5. Koji je planet najtopliji u Suncevom sustavu?

@@ -10,7 +10,7 @@
 int menu(int choice){
 
     choice = 0;
-    //system("cls");
+    system("cls");
 
     do{
         int kosa = 47;
@@ -45,8 +45,8 @@ int menu(int choice){
 
             case 2:
                     //Pogledaj score tablicu
-                    exit(0);
                     system("cls");
+                    seeScoreTable();
             break;
 
             case 3:

@@ -12,7 +12,6 @@ int main(){
 
     int choice;
     
-    //openQuestionsFile();
     //loadingScreen();
     menu(choice);
     
