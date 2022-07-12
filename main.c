@@ -11,11 +11,8 @@
 int main(){
 
     int choice;
-
-    //char c;
-    //scanf("%c", &c);
-    system("cls");
-
+    
+    //openQuestionsFile();
     //loadingScreen();
     menu(choice);
     

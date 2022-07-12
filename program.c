@@ -4,104 +4,225 @@
 #include <Windows.h>
 #include <unistd.h>
 #include <string.h>
+#include <stdbool.h>
+
+#include "logo.c"
+
+#define FILENAME_SIZE 1024
+#define MAX_LINE 2048
 
 typedef struct scoreTable{
 
     char nickname[11];
     int scoreNumber;
-    int questionNumber;
 
 }SCORE;
 
-typedef struct firstQuestionPossiblitiy{
+
+void firstQuestion(int);
+int randNumber(int);
+int questRead(int);
+
+char QFF2(int scoreNumber);
+
+//PRVO PITANJE
+char openFirstQuestionsFile(){
+
+    int r;
+    int scoreNumber = 1;
+    system("cls");
+    sleep(1);
+    flushall
+        r = randNumber(r);
+        char ans;
+                
+      
+            if(r == 1){
+                printLogo();
+                questRead(1);
+                questRead(2);
+                questRead(3);
+            
+                printf("Vas odgovor: ");
+                scanf(" %c", &ans);
+                if(ans == 'a' || ans == 'A'){
+                    system("cls");
+                    printf("Tocan odgovor, osvojili ste 100 HRK");
+                }
+                else{
+                    system("cls");
+                    printf("Krivi odgovor, osvojili ste 0 HRK");
+                    exit(0);
+                }
+            }
+            
+            else if(r == 2){
+                printLogo();
+                questRead(5);
+                questRead(6);
+                questRead(7);
+            
+                printf("Vas odgovor: ");
+                scanf(" %c", &ans);
+                if(ans == 'b' || ans == 'B'){
+                    system("cls");
+                    printf("Tocan odgovor, osvojili ste 100 HRK");
+                    char QFF2();
+                }
+                else{
+                    system("cls");
+                    printf("Krivi odgovor, osvojili ste 0 HRK");
+                    exit(0);
+                }
+            }
+
+
+      
+            else if(r == 3){
+                printLogo();
+                questRead(9);
+                questRead(10);
+                questRead(11);
+            
+                printf("Vas odgovor: ");
+                scanf(" %c", &ans);
+                if(ans == 'd' || ans == 'D'){
+                    system("cls");
+                    printf("Tocan odgovor, osvojili ste 100 HRK");
+                    char QFF2();
+                }
+                else{
+                    system("cls");
+                    printf("Krivi odgovor, osvojili ste 0 HRK");
+                    exit(0);
+                }
+            }
+        }
+//PRVO PITANJE 
+
+//DRUGO PITANJE
+char QFF2(){
     
-    char questionOne[250];
-    char ansAOne[50];
-    char ansBOne[50];
-    char ansCOne[50];
-    char ansDOne[50];
-
-}FIRST;
-
-typedef struct secondQuestionPossiblitiy{
+    int scoreNumber = 2;
+    int r;
+    system("cls");
+    sleep(1);
+    flushall
+        r = randNumber(r);
+        char ans;
+                
+      
+            if(r == 1){
+                printLogo();
+                questRead(13);
+                questRead(14);
+                questRead(15);
+            
+                printf("Vas odgovor: ");
+                scanf(" %c", &ans);
+                if(ans == 'a' || ans == 'A'){
+                    system("cls");
+                    printf("Tocan odgovor, osvojili ste 200 HRK");
+                }
+                else{
+                    system("cls");
+                    printf("Krivi odgovor, osvojili ste 100 HRK");
+                    exit(0);
+                }
+            }
+            
+            else if(r == 2){
+                printLogo();
+                questRead(17);
+                questRead(18);
+                questRead(19);
+            
+                printf("Vas odgovor: ");
+                scanf(" %c", &ans);
+                if(ans == 'c' || ans == 'C'){
+                    system("cls");
+                    printf("Tocan odgovor, osvojili ste 200 HRK");
+                }
+                else{
+                    system("cls");
+                    printf("Krivi odgovor, osvojili ste 100 HRK");
+                    exit(0);
+                }
+            }
+      
+            else if(r == 3){
+                printLogo();
+                questRead(21);
+                questRead(22);
+                questRead(23);
+            
+                printf("Vas odgovor: ");
+                scanf(" %c", &ans);
+                if(ans == 'b' || ans == 'B'){
+                    system("cls");
+                    printf("Tocan odgovor, osvojili ste 200 HRK");
+                }
+                else{
+                    system("cls");
+                    printf("Krivi odgovor, osvojili ste 100 HRK");
+                    exit(0);
+                }
+            }
+}
+//DRUGO PITANJE
     
-    char questionTwo[250];
-    char ansATwo[50];
-    char ansBTwo[50];
-    char ansCTwo[50];
-    char ansDTwo[50];
 
-}SECOND;
+        
 
-typedef struct thirdQuestionPossiblitiy{
     
-    char questionThree[250];
-    char ansAThree[50];
-    char ansBThree[50];
-    char ansCThree[50];
-    char ansDThree[50];
-
-}THIRD;
 
 
-int score(){
+int randNumber(int r){
 
-    int money[] = {
+    srand((unsigned) time(NULL));
 
-        100, 200, 300, 500, 1000,
-        2000, 4000, 8000, 16000, 32000,
-        64000, 1250000, 250000, 500000, 1000000
-    };
+    r = (rand() % (3 - 1 + 1)) + 1;
+
+    return r;
 }
 
-char openQuestionsFile(){
 
-    SCORE st;
-    FILE *fp = NULL;
-    st.questionNumber = 1;
-    st.scoreNumber = -1;
 
-    printf("Unesi nadimak (max 10 znakova): ");
-    gets(st.nickname);
-    gets(st.nickname);
-    printf("\n");
+int questRead(int lineNumber){
+   
+   FILE *fp;
+   fp= fopen("pitanja.txt", "r");
+   int count = 1;
+   
+    if ( fp != NULL )
+    {   
+    char questLine[1024];
+    while (fgets(questLine, sizeof questLine, fp) != NULL) 
+        {   
+            if (count == lineNumber)
+            {   
+                
+            printf("%s\n", questLine);
+            fclose(fp);
+            return 0;
 
-    if(st.questionNumber == 1) fp = fopen("1.txt", "r");
-
-    else if(st.questionNumber == 2) fp = fopen("2.txt", "r");
-
-    else if(st.questionNumber == 3) fp = fopen("3.txt", "r");
-
-    else if(st.questionNumber == 4) fp = fopen("4.txt", "r");
-
-    else if(st.questionNumber == 5) fp = fopen("5.txt", "r");
-
-    else if(st.questionNumber == 6) fp = fopen("6.txt", "r");
-
-    else if(st.questionNumber == 7) fp = fopen("7.txt", "r");
-
-    else if(st.questionNumber == 8) fp = fopen("8.txt", "r");
-
-    else if(st.questionNumber == 9) fp = fopen("9.txt", "r");
-
-    else if(st.questionNumber == 10) fp = fopen("10.txt", "r");
-
-    else if(st.questionNumber == 11) fp = fopen("11.txt", "r");
-
-    else if(st.questionNumber == 12) fp = fopen("12.txt", "r");
-
-    else if(st.questionNumber == 13) fp = fopen("13.txt", "r");
-
-    else if(st.questionNumber == 14) fp = fopen("14.txt", "r");
-
-    else if(st.questionNumber == 15) fp = fopen("15.txt", "r");
-
-    else printf("Error");
-
-    printf("%s\n", st.nickname);
-    printf("test");
-    
+            }   
+            else
+            {   
+                count++;
+            }   
+           
+        }
+   
     fclose(fp);
+    
+    
+    return 0;
+    }
 }
 
 
+int scoreTable(){
+
+
+}

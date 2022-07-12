@@ -10,7 +10,7 @@
 int menu(int choice){
 
     choice = 0;
-    system("cls");
+    //system("cls");
 
     do{
         int kosa = 47;
@@ -39,7 +39,7 @@ int menu(int choice){
             case 1:
                     //Pokreni igru
                     system("cls");
-                    openQuestionsFile();
+                    openFirstQuestionsFile();
                     
             break;
 

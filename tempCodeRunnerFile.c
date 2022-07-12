@@ -1,2 +1,2 @@
 
-    menu(choice);
+    int choice;
