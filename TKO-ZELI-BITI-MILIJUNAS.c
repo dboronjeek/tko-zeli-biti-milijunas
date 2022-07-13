@@ -1,8 +1,7 @@
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
-#include <Windows.h>
-#include <unistd.h>
+#include <windows.h>
 #include <string.h>
 
 #include "program.c"
