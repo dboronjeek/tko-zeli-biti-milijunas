@@ -20,16 +20,14 @@ void seeScoreTable();
 
 void loadingScreen(){
 
+    sleep(1);
     system("cls");
+    printf("\t\t*****************************\n");
+    printf("\t\t******* Ucitavanje **********\n");
+    printf("\t\t*****************************\n\n");
+    printf("\t\t");
 
-    int i;
-    sleep(2);
-    printf("\t*****************************\n");
-    printf("\t******* Ucitavanje **********\n");
-    printf("\t*****************************\n\n");
-    printf("\t");
-
-    for(i = 0; i < 5; i++){
+    for(int i = 0; i < 5; i++){
 
         printf(" [|]  ");
         usleep(500000);
@@ -99,6 +97,7 @@ int menu(int choice){
                     printf("**********************************\n");  
                     sleep(2);
                     system("cls");
+                  
             break;
         }
 
