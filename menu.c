@@ -39,7 +39,7 @@ int menu(int choice){
             case 1:
                     //Pokreni igru
                     system("cls");
-                    openFirstQuestionsFile();
+                    openQuestionsFile();
                     
             break;
 

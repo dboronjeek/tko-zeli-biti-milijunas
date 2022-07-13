@@ -12,7 +12,7 @@ int main(){
 
     int choice;
     
-    //loadingScreen();
+    loadingScreen();
     menu(choice);
     
     return 0;
