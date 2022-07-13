@@ -695,7 +695,6 @@ char openQuestionsFile(){
 }
 //PITANJA
 
-
 int randNumber(int r){
 
     srand((unsigned) time(NULL));
@@ -704,8 +703,6 @@ int randNumber(int r){
 
     return r;
 }
-
-
 
 int questRead(int lineNumber){
    
@@ -739,3 +736,6 @@ int questRead(int lineNumber){
     return 0;
     }
 }
+
+
+

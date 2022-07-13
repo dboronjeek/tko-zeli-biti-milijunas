@@ -10,9 +10,11 @@ int main(){
 
     int choice;
     
-    system("cls");
-    loadingScreen();
-    menu(choice);
+
+    sortScoreFile();
+    //system("cls");
+    //loadingScreen();
+    //menu(choice);
     
     return 0;
 }
