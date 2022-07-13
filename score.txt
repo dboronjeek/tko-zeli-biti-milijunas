@@ -1,3 +1,5 @@
 da - 1000 HRK
 dane - 500 HRK
 isus - 200 HRK
+bela - 0 HRK
+bela - 200 HRK
