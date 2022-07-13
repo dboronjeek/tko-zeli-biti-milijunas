@@ -64,7 +64,7 @@ C: Zagreb            D: Osijek
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 5. Koji je planet najtopliji u Suncevom sustavu?
 A: Venera            B: Zemlja
-C: Zemlja            D: Jupiter
+C: Mars              D: Jupiter
 
 5. U kojoj je zemlji izumljena Cezar salata?
 A: Italija           B: Meksiko

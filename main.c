@@ -5,13 +5,13 @@
 #include <unistd.h>
 #include <string.h>
 
-#include "menu.c"
-#include "loadingScreen.c"
+#include "program.c"
 
 int main(){
 
     int choice;
     
+    system("cls");
     loadingScreen();
     menu(choice);
     
