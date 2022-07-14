@@ -10,11 +10,10 @@ int main(){
 
     int choice;
     
-
-    sortScoreFile();
+    //Sleep(1000000);
     //system("cls");
     //loadingScreen();
-    //menu(choice);
+    menu(choice);
     
     return 0;
 }
