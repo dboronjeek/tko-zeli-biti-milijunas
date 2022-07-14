@@ -10,9 +10,9 @@ int main(){
 
     int choice;
     
-    //Sleep(1000000);
+    //bubbleSort();
     //system("cls");
-    //loadingScreen();
+    loadingScreen();
     menu(choice);
     
     return 0;

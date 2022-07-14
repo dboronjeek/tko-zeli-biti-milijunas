@@ -1,0 +1,6 @@
+tocn 1000
+des 500
+dopro 500
+dis 200
+dpr 100
+dodo 0

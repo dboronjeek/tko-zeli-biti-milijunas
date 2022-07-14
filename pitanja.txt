@@ -15,8 +15,8 @@ A: Lori                 B: Penant
 C: Ara                  D: Zako
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 2. Koji je glumac osvojio najboljeg glumca Oscara za filmove Philadelphia (1993) i Forrest Gump (1994)?
-A: Tom Hanks		B: Chris Hemsworth
-C: Daniel Brühl         D: Frank Capra
+A: Tom Hanks		 B: Chris Hemsworth
+C: Daniel Bruhl         D: Frank Capra
 
 2. Koje je godine Titanik potonuo u Atlantski ocean 15. travnja, djevicanskim putovanjem iz Southamptona? 
 A: 1914                 B: 1912

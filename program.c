@@ -13,6 +13,7 @@ typedef struct Table{
 
 }SCORE;
 
+void bubbleSort();
 void scoreTable(SCORE s);
 char openQuestionsFile();
 void seeScoreTable();
@@ -79,6 +80,7 @@ int menu(int choice){
 
             case 2:
                     //Pogledaj score tablicu
+                    bubbleSort();
                     system("cls");
                     seeScoreTable();
             break;
@@ -125,10 +127,14 @@ char printLogo(){
 
 int randNumber(int);
 int questRead(int);
+void bubbleSort();
 
 void scoreTable(SCORE s){
     
-    
+    char crta = '-';
+    char mn[3] = "HRK";
+    int zero = 0;
+
     int money[] = {
         100, 200, 300, 500, 1000,
         2000, 4000, 8000, 16000, 32000,
@@ -136,25 +142,24 @@ void scoreTable(SCORE s){
     };
 
     printf("Unesi svoj nadimak (ne vise od 10 znakova): ");
-    gets(s.nickname);
-    gets(s.nickname);
+    scanf("%s", s.nickname);
+
 
     FILE* fp = NULL;
     fp = fopen("score.txt", "a");
 
     if(s.scoreNumber == -1){
-        fprintf(fp, "%s - 0 HRK\n", s.nickname);
+        fprintf(fp, "%s %d\n", s.nickname, zero);
     }
 
     else{
-        fprintf(fp, "%s - %d HRK\n", s.nickname, money[s.scoreNumber]);
+        fprintf(fp, "%s %d\n", s.nickname, money[s.scoreNumber]);
     }
     
     fclose(fp);
 
     system("cls");
-    int a = 0;
-    menu(a);
+    menu(0);
 }
 
 void seeScoreTable(){
@@ -163,15 +168,17 @@ void seeScoreTable(){
     FILE* fp = NULL;
     char ans[2];
     char da[] = {"da"};
+    SCORE s;
+    int money;
 
     printf("********************* 'SCORE' TABLICA *********************\n");
-    fp = fopen("score.txt", "r");
+    fp = fopen("scoreSorted.txt", "r");
 
-    while (fgets(score, 1024, fp) != NULL){
+    while (fscanf(fp, "%s%d", s.nickname, &money) != EOF){
         
-        printf("%s", score);
+        printf("%s - %d HRK\n", s.nickname, money);
     }
-    printf("\n***********************************************************");
+    printf("***********************************************************");
     fclose(fp);
 
     printf("\nPovratak u izbornik (da/ne): ");
@@ -737,5 +744,79 @@ int questRead(int lineNumber){
     }
 }
 
+int numberOfLines(){
+
+    FILE *fp;
+    fp= fopen("score.txt", "r");
+    int count = 0;
+   
+    if ( fp != NULL ){   
+        char questLine[1024];
+        
+        while (fgets(questLine, sizeof questLine, fp) != NULL){     
+        
+            count++;
+
+        }
+    }
+
+    fclose(fp);
+    
+    return count;
+}
+
+void bubbleSort(){
+
+    int size;
+    int array[1024];
+    char string[1024][11];
+    FILE *fp = NULL;
+    FILE *fc = NULL;
+
+    size = numberOfLines();
+
+    fp = fopen("score.txt", "r");
+
+    int i, j;
+    int fi = 0;
+    int swap;
+    char temp[1024];
+    
+
+    while (fscanf(fp, "%s %d", string[fi], &array[fi]) != EOF){
+        
+        //printf("%s - %d HRK\n", string[fi], array[fi]);
+        fi++;
+    }
+
+    for(i = 0; i < (size - 1); i++){
+        for(j = 0; j < size - i - 1; j++){
+            if(array[j] < array[j + 1]){
+                
+                swap = array[j];
+                array[j] = array[j + 1];
+                array[j + 1] = swap;
+
+                strcpy(temp, string[j]);
+                strcpy(string[j], string[j + 1]);
+                strcpy(string[j + 1], temp);
+            }
+        }
+    }
+    printf("\n");
+    for(j = 0; j < size; j++){
+        //printf("%s - %d HRK\n", string[j], array[j]);
+    }
+
+    fclose(fp);
+
+    fc = fopen("scoreSorted.txt", "w");
+    
+    for(j = 0; j < size; j++){
+        fprintf(fc, "%s %d\n", string[j], array[j]);
+    }
+
+    fclose(fc);
+}
 
 

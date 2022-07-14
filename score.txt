@@ -1,5 +1,6 @@
-dodo - 0 HRK
-isus - 0 HRK
-do - 100 HRK
-di - 0 HRK
-dodo - 0 HRK
+dodo 0
+dis 200
+des 500
+tocn 1000
+dpr 100
+dopro 500
