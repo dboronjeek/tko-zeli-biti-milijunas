@@ -1,3 +1,4 @@
+zprov 4000
 tocn 1000
 des 500
 dopro 500

@@ -5,7 +5,6 @@
 #include <string.h>
 #include <stdbool.h>
 
-
 typedef struct Table{
 
     char nickname[11];

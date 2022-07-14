@@ -15,7 +15,7 @@ A: Lori                 B: Penant
 C: Ara                  D: Zako
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 2. Koji je glumac osvojio najboljeg glumca Oscara za filmove Philadelphia (1993) i Forrest Gump (1994)?
-A: Tom Hanks		 B: Chris Hemsworth
+A: Tom Hanks		B: Chris Hemsworth
 C: Daniel Bruhl         D: Frank Capra
 
 2. Koje je godine Titanik potonuo u Atlantski ocean 15. travnja, djevicanskim putovanjem iz Southamptona? 
@@ -78,11 +78,11 @@ C: Egipat            D: Iran
 A: Po Enricu Fermiju      B: Po Albertu Einsteinu
 C: Po Alfredu Nobelu      D: Po Isaacu Newtonu        
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-6. Koje dvije drzave dijele najduzu međunarodnu granicu?
+6. Koje dvije drzave dijele najduzu medunarodnu granicu?
 A: Kanada i SAD     B: Kina i Rusija
 C: SAD i Meksiko    D: Rusija i Ukrajina
 
-6. Koji je najtvrđi kamen?
+6. Koji je najtvrdi kamen?
 A: Rubin 	     B: Dijamant
 C: Zlato             D: Bakar
 
@@ -90,7 +90,7 @@ C: Zlato             D: Bakar
 A: World Why Web     B: Whey Wide Web
 C: World Wide Web    D: World Whey Web
 
-6. Koja rijeka je prirodna granice između Moldavije i Rumunjske?
+6. Koja rijeka je prirodna granice izmedu Moldavije i Rumunjske?
 A: Timis             B: Nil 
 C: Moris             D: Prut
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -210,7 +210,7 @@ C: Superman                 D: Batman
 A: Dnjepar          B: Dunav
 C: Sava             D: Nil 
 
-14. Kako nazivamo podrucje u RH smjesteno između Mure i Drave?
+14. Kako nazivamo podrucje u RH smjesteno izmedu Mure i Drave?
 A: Podravina        B: Medimurje
 C: Baranja          D: Slavonija
 
