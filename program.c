@@ -213,7 +213,10 @@ char openQuestionsFile(){
      
     for(int i = 0; i < 15; i++){
         
-        r = randNumber(r);
+        r = randNumber(r);            
+        
+        int *ptr;
+        ptr = (int*) malloc(r * sizeof(int));
 
         if(r == 1){
             
@@ -233,6 +236,7 @@ char openQuestionsFile(){
                     printf("Tocan odgovor, osvojili ste 100 HRK");
                     Sleep(1000);
                     system("cls");
+                    free(ptr);
                 }
 
                 else{
@@ -240,6 +244,7 @@ char openQuestionsFile(){
                     printf("Krivi odgovor, osvojili ste 0 HRK");
                     Sleep(1000);
                     system("cls");
+                    free(ptr);
                     scoreTable(s);
                 }
 
@@ -261,6 +266,7 @@ char openQuestionsFile(){
                     printf("Tocan odgovor, osvojili ste %d HRK", money[question]);
                     Sleep(1000);
                     system("cls");
+                    free(ptr);
     
                 }
 
@@ -269,6 +275,7 @@ char openQuestionsFile(){
                     printf("Krivi odgovor, osvojili ste %d HRK", money[question - 1]);
                     Sleep(1000);
                     system("cls");
+                    free(ptr);
                     scoreTable(s);
                 }
             }
@@ -289,6 +296,7 @@ char openQuestionsFile(){
                     printf("Tocan odgovor, osvojili ste %d HRK", money[question]);
                     Sleep(1000);
                     system("cls");
+                    free(ptr);
                     scoreTable(s);
     
                 }
@@ -298,6 +306,7 @@ char openQuestionsFile(){
                     printf("Krivi odgovor, osvojili ste %d HRK", money[question - 1]);
                     Sleep(1000);
                     system("cls");
+                    free(ptr);
                     scoreTable(s);
                 }
 
@@ -318,6 +327,7 @@ char openQuestionsFile(){
                     system("cls");
                     printf("Tocan odgovor, osvojili ste %d HRK", money[question]);
                     Sleep(1000);
+                    free(ptr);
                     system("cls");
     
                 }
@@ -327,6 +337,7 @@ char openQuestionsFile(){
                     printf("Krivi odgovor, osvojili ste %d HRK", money[question - 1]);
                     Sleep(1000);
                     system("cls");
+                    free(ptr);
                     scoreTable(s);
                 }
 
@@ -353,6 +364,7 @@ char openQuestionsFile(){
                     system("cls");
                     printf("Tocan odgovor, osvojili ste 100 HRK");
                     Sleep(1000);
+                    free(ptr);
                     system("cls");
                 }
 
@@ -361,6 +373,7 @@ char openQuestionsFile(){
                     printf("Krivi odgovor, osvojili ste 0 HRK");
                     Sleep(1000);
                     system("cls");
+                    free(ptr);
                     scoreTable(s);
                 }
 
@@ -382,6 +395,7 @@ char openQuestionsFile(){
                     printf("Tocan odgovor, osvojili ste %d HRK", money[question]);
                     Sleep(1000);
                     system("cls");
+                    free(ptr);
     
                 }
 
@@ -390,6 +404,7 @@ char openQuestionsFile(){
                     printf("Krivi odgovor, osvojili ste %d HRK", money[question - 1]);
                     Sleep(1000);
                     system("cls");
+                    free(ptr);
                     scoreTable(s);
                 }
             }
@@ -410,6 +425,7 @@ char openQuestionsFile(){
                     printf("Tocan odgovor, osvojili ste %d HRK", money[question]);
                     Sleep(1000);
                     system("cls");
+                    free(ptr);
                     scoreTable(s);
     
                 }
@@ -419,6 +435,7 @@ char openQuestionsFile(){
                     printf("Krivi odgovor, osvojili ste %d HRK", money[question - 1]);
                     Sleep(1000);
                     system("cls");
+                    free(ptr);
                     scoreTable(s);
                 }
 
@@ -440,6 +457,7 @@ char openQuestionsFile(){
                     printf("Tocan odgovor, osvojili ste %d HRK", money[question]);
                     Sleep(1000);
                     system("cls");
+                    free(ptr);
     
                 }
 
@@ -448,6 +466,7 @@ char openQuestionsFile(){
                     printf("Krivi odgovor, osvojili ste %d HRK", money[question - 1]);
                     Sleep(1000);
                     system("cls");
+                    free(ptr);
                     scoreTable(s);
                 }
 
@@ -472,6 +491,7 @@ char openQuestionsFile(){
                     printf("Tocan odgovor, osvojili ste 100 HRK");
                     Sleep(1000);
                     system("cls");
+                    free(ptr);
                 }
 
                 else{
@@ -479,6 +499,7 @@ char openQuestionsFile(){
                     printf("Krivi odgovor, osvojili ste 0 HRK");
                     Sleep(1000);
                     system("cls");
+                    free(ptr);
                     scoreTable(s);
                 }
 
@@ -500,6 +521,7 @@ char openQuestionsFile(){
                     printf("Tocan odgovor, osvojili ste %d HRK", money[question]);
                     Sleep(1000);
                     system("cls");
+                    free(ptr);
     
                 }
 
@@ -508,6 +530,7 @@ char openQuestionsFile(){
                     printf("Krivi odgovor, osvojili ste %d HRK", money[question - 1]);
                     Sleep(1000);
                     system("cls");
+                    free(ptr);
                     scoreTable(s);
                 }
             }
@@ -528,6 +551,7 @@ char openQuestionsFile(){
                     printf("Tocan odgovor, osvojili ste %d HRK", money[question]);
                     Sleep(1000);
                     system("cls");
+                    free(ptr);
                     scoreTable(s);
     
                 }
@@ -537,6 +561,7 @@ char openQuestionsFile(){
                     printf("Krivi odgovor, osvojili ste %d HRK", money[question - 1]);
                     Sleep(1000);
                     system("cls");
+                    free(ptr);
                     scoreTable(s);
                 }
 
@@ -557,6 +582,7 @@ char openQuestionsFile(){
                     system("cls");
                     printf("Tocan odgovor, osvojili ste %d HRK", money[question]);
                     Sleep(1000);
+                    free(ptr);
                     system("cls");
     
                 }
@@ -566,6 +592,7 @@ char openQuestionsFile(){
                     printf("Krivi odgovor, osvojili ste %d HRK", money[question - 1]);
                     Sleep(1000);
                     system("cls");
+                    free(ptr);
                     scoreTable(s);
                 }
 
@@ -591,6 +618,7 @@ char openQuestionsFile(){
                     printf("Tocan odgovor, osvojili ste 100 HRK");
                     Sleep(1000);
                     system("cls");
+                    free(ptr);
                 }
 
                 else{
@@ -598,6 +626,7 @@ char openQuestionsFile(){
                     printf("Krivi odgovor, osvojili ste 0 HRK");
                     Sleep(1000);
                     system("cls");
+                    free(ptr);
                     scoreTable(s);
                 }
 
@@ -618,6 +647,7 @@ char openQuestionsFile(){
                     system("cls");
                     printf("Tocan odgovor, osvojili ste %d HRK", money[question]);
                     Sleep(1000);
+                    free(ptr);
                     system("cls");
     
                 }
@@ -627,6 +657,7 @@ char openQuestionsFile(){
                     printf("Krivi odgovor, osvojili ste %d HRK", money[question - 1]);
                     Sleep(1000);
                     system("cls");
+                    free(ptr);
                     scoreTable(s);
                 }
             }
@@ -647,6 +678,7 @@ char openQuestionsFile(){
                     printf("Tocan odgovor, osvojili ste %d HRK", money[question]);
                     Sleep(1000);
                     system("cls");
+                    free(ptr);
                     scoreTable(s);
     
                 }
@@ -656,6 +688,7 @@ char openQuestionsFile(){
                     printf("Krivi odgovor, osvojili ste %d HRK", money[question - 1]);
                     Sleep(1000);
                     system("cls");
+                    free(ptr);
                     scoreTable(s);
                 }
 
@@ -676,6 +709,7 @@ char openQuestionsFile(){
                     system("cls");
                     printf("Tocan odgovor, osvojili ste %d HRK", money[question]);
                     Sleep(1000);
+                    free(ptr);
                     system("cls");
     
                 }
@@ -685,6 +719,7 @@ char openQuestionsFile(){
                     printf("Krivi odgovor, osvojili ste %d HRK", money[question - 1]);
                     Sleep(1000);
                     system("cls");
+                    free(ptr);
                     scoreTable(s);
                 }
 
@@ -705,7 +740,13 @@ int randNumber(int r){
 
     srand((unsigned) time(NULL));
 
+    int *ptr;
+    
     r = (rand() % (4 - 1 + 1)) + 1;
+
+    ptr = (int *) malloc(r * sizeof(int));
+
+    free(ptr);
 
     return r;
 }
