@@ -131,7 +131,6 @@ void bubbleSort();
 void scoreTable(SCORE s){
     
     char crta = '-';
-    char mn[3] = "HRK";
     int zero = 0;
 
     int money[] = {
@@ -223,6 +222,8 @@ char openQuestionsFile(){
             if(question == 0){
 
                 printLogo();
+                printf("Trenutacno ste odgovorili %d pitanja i osvojili 0 HRK!\n", question);
+                printf("****************************************************************\n");
                 questRead(1);
                 questRead(2);
                 questRead(3);
@@ -233,16 +234,21 @@ char openQuestionsFile(){
                 if(ans == 'a' || ans == 'A'){
                     
                     system("cls");
-                    printf("Tocan odgovor, osvojili ste 100 HRK");
-                    Sleep(1000);
+                    printLogo();
+                    printf("Tocan odgovor, osvojili ste 100 HRK!");
+                    printf("\n****************************************************************\n");
+                    Sleep(3000);
                     system("cls");
                     free(ptr);
                 }
 
                 else{
                     system("cls");
-                    printf("Krivi odgovor, osvojili ste 0 HRK");
-                    Sleep(1000);
+                    printLogo();
+                    printf("Krivi odgovor, osvojili ste 0 HRK!");
+                    printf("\nTocan odgovor je A!");
+                    printf("\n****************************************************************\n");
+                    Sleep(3000);
                     system("cls");
                     free(ptr);
                     scoreTable(s);
@@ -253,6 +259,8 @@ char openQuestionsFile(){
             else if(question == 1){
 
                 printLogo();
+                printf("Trenutacno ste odgovorili %d pitanja i osvojili %d HRK!\n", question, money[question]);
+                printf("****************************************************************\n");
                 questRead(1 + 16);
                 questRead(2 + 16);
                 questRead(3 + 16);
@@ -263,8 +271,10 @@ char openQuestionsFile(){
                 if(ans == 'a' || ans == 'A'){
                     
                     system("cls");
-                    printf("Tocan odgovor, osvojili ste %d HRK", money[question]);
-                    Sleep(1000);
+                    printLogo();
+                    printf("Tocan odgovor, osvojili ste %d HRK!", money[question]);
+                    printf("\n****************************************************************\n");
+                    Sleep(3000);
                     system("cls");
                     free(ptr);
     
@@ -272,8 +282,11 @@ char openQuestionsFile(){
 
                 else{
                     system("cls");
-                    printf("Krivi odgovor, osvojili ste %d HRK", money[question - 1]);
-                    Sleep(1000);
+                    printLogo();
+                    printf("Krivi odgovor, osvojili ste %d HRK!", money[question - 1]);
+                    printf("\nTocan odgovor je A!");
+                    printf("\n****************************************************************\n");
+                    Sleep(3000);
                     system("cls");
                     free(ptr);
                     scoreTable(s);
@@ -283,6 +296,8 @@ char openQuestionsFile(){
             else if(question == 15){
                 
                 printLogo();
+                printf("Trenutacno ste odgovorili %d pitanja i osvojili %d HRK!\n", question, money[question]);
+                printf("****************************************************************\n");
                 questRead(1 + 16 * question);
                 questRead(2 + 16 * question);
                 questRead(3 + 16 * question);
@@ -293,8 +308,10 @@ char openQuestionsFile(){
                 if(ans == 'a' || ans == 'A'){
                     
                     system("cls");
-                    printf("Tocan odgovor, osvojili ste %d HRK", money[question]);
-                    Sleep(1000);
+                    printLogo();
+                    printf("Tocan odgovor, osvojili ste %d HRK!", money[question]);
+                    printf("\n****************************************************************\n");
+                    Sleep(3000);
                     system("cls");
                     free(ptr);
                     scoreTable(s);
@@ -303,8 +320,11 @@ char openQuestionsFile(){
 
                 else{
                     system("cls");
-                    printf("Krivi odgovor, osvojili ste %d HRK", money[question - 1]);
-                    Sleep(1000);
+                    printLogo();
+                    printf("Krivi odgovor, osvojili ste %d HRK!", money[question - 1]);
+                    printf("\nTocan odgovor je A!");
+                    printf("\n****************************************************************\n");
+                    Sleep(3000);
                     system("cls");
                     free(ptr);
                     scoreTable(s);
@@ -315,6 +335,8 @@ char openQuestionsFile(){
             else{
 
                 printLogo();
+                printf("Trenutacno ste odgovorili %d pitanja i osvojili %d HRK!\n", question, money[question]);
+                printf("****************************************************************\n");
                 questRead(1 + 16 * question);
                 questRead(2 + 16 * question);
                 questRead(3 + 16 * question);
@@ -325,8 +347,10 @@ char openQuestionsFile(){
                 if(ans == 'a' || ans == 'A'){
                     
                     system("cls");
-                    printf("Tocan odgovor, osvojili ste %d HRK", money[question]);
-                    Sleep(1000);
+                    printLogo();
+                    printf("Tocan odgovor, osvojili ste %d HRK!", money[question]);
+                    printf("\n****************************************************************\n");
+                    Sleep(3000);
                     free(ptr);
                     system("cls");
     
@@ -334,8 +358,11 @@ char openQuestionsFile(){
 
                 else{
                     system("cls");
-                    printf("Krivi odgovor, osvojili ste %d HRK", money[question - 1]);
-                    Sleep(1000);
+                    printLogo();
+                    printf("Krivi odgovor, osvojili ste %d HRK!", money[question - 1]);
+                    printf("\nTocan odgovor je A!");
+                    printf("\n****************************************************************\n");
+                    Sleep(3000);
                     system("cls");
                     free(ptr);
                     scoreTable(s);
@@ -352,6 +379,8 @@ char openQuestionsFile(){
             if(question == 0){
 
                 printLogo();
+                printf("Trenutacno ste odgovorili %d pitanja i osvojili 0 HRK!\n", question);
+                printf("****************************************************************\n");
                 questRead(5);
                 questRead(6);
                 questRead(7);
@@ -362,16 +391,21 @@ char openQuestionsFile(){
                 if(ans == 'b' || ans == 'B'){
                     
                     system("cls");
-                    printf("Tocan odgovor, osvojili ste 100 HRK");
-                    Sleep(1000);
+                    printLogo();
+                    printf("Tocan odgovor, osvojili ste 100 HRK!");
+                    printf("\n****************************************************************\n");
+                    Sleep(3000);
                     free(ptr);
                     system("cls");
                 }
 
                 else{
                     system("cls");
-                    printf("Krivi odgovor, osvojili ste 0 HRK");
-                    Sleep(1000);
+                    printLogo();
+                    printf("Krivi odgovor, osvojili ste 0 HRK!");
+                    printf("\nTocan odgovor je B!");
+                    printf("\n****************************************************************\n");
+                    Sleep(3000);
                     system("cls");
                     free(ptr);
                     scoreTable(s);
@@ -382,6 +416,8 @@ char openQuestionsFile(){
             else if(question == 1){
 
                 printLogo();
+                printf("Trenutacno ste odgovorili %d pitanja i osvojili %d HRK!\n", question, money[question]);
+                printf("****************************************************************\n");
                 questRead(5 + 16);
                 questRead(6 + 16);
                 questRead(7 + 16);
@@ -392,8 +428,10 @@ char openQuestionsFile(){
                 if(ans == 'b' || ans == 'B'){
                     
                     system("cls");
-                    printf("Tocan odgovor, osvojili ste %d HRK", money[question]);
-                    Sleep(1000);
+                    printLogo();
+                    printf("Tocan odgovor, osvojili ste %d HRK!", money[question]);
+                    printf("\n****************************************************************\n");
+                    Sleep(3000);
                     system("cls");
                     free(ptr);
     
@@ -401,8 +439,11 @@ char openQuestionsFile(){
 
                 else{
                     system("cls");
-                    printf("Krivi odgovor, osvojili ste %d HRK", money[question - 1]);
-                    Sleep(1000);
+                    printLogo();
+                    printf("Krivi odgovor, osvojili ste %d HRK!", money[question - 1]);
+                    printf("\nTocan odgovor je B!");
+                    printf("\n****************************************************************\n");
+                    Sleep(3000);
                     system("cls");
                     free(ptr);
                     scoreTable(s);
@@ -412,6 +453,8 @@ char openQuestionsFile(){
             else if(question == 15){
                 
                 printLogo();
+                printf("Trenutacno ste odgovorili %d pitanja i osvojili %d HRK\n!", question, money[question]);
+                printf("****************************************************************\n");
                 questRead(5 + 16 * question);
                 questRead(6 + 16 * question);
                 questRead(7 + 16 * question);
@@ -422,8 +465,10 @@ char openQuestionsFile(){
                 if(ans == 'b' || ans == 'B'){
                     
                     system("cls");
-                    printf("Tocan odgovor, osvojili ste %d HRK", money[question]);
-                    Sleep(1000);
+                    printLogo();
+                    printf("Tocan odgovor, osvojili ste %d HRK!", money[question]);
+                    printf("\n****************************************************************\n");
+                    Sleep(3000);
                     system("cls");
                     free(ptr);
                     scoreTable(s);
@@ -432,8 +477,11 @@ char openQuestionsFile(){
 
                 else{
                     system("cls");
-                    printf("Krivi odgovor, osvojili ste %d HRK", money[question - 1]);
-                    Sleep(1000);
+                    printLogo();
+                    printf("Krivi odgovor, osvojili ste %d HRK!", money[question - 1]);
+                    printf("\nTocan odgovor je B!");
+                    printf("\n****************************************************************\n");
+                    Sleep(3000);
                     system("cls");
                     free(ptr);
                     scoreTable(s);
@@ -444,6 +492,8 @@ char openQuestionsFile(){
             else{
 
                 printLogo();
+                printf("Trenutacno ste odgovorili %d pitanja i osvojili %d HRK!\n", question, money[question]);
+                printf("****************************************************************\n");
                 questRead(5 + 16 * question);
                 questRead(6 + 16 * question);
                 questRead(7 + 16 * question);
@@ -454,8 +504,10 @@ char openQuestionsFile(){
                 if(ans == 'b' || ans == 'B'){
                     
                     system("cls");
-                    printf("Tocan odgovor, osvojili ste %d HRK", money[question]);
-                    Sleep(1000);
+                    printLogo();
+                    printf("Tocan odgovor, osvojili ste %d HRK!", money[question]);
+                    printf("\n****************************************************************\n");
+                    Sleep(3000);
                     system("cls");
                     free(ptr);
     
@@ -463,8 +515,11 @@ char openQuestionsFile(){
 
                 else{
                     system("cls");
-                    printf("Krivi odgovor, osvojili ste %d HRK", money[question - 1]);
-                    Sleep(1000);
+                    printLogo();
+                    printf("Krivi odgovor, osvojili ste %d HRK!", money[question - 1]);
+                    printf("\nTocan odgovor je B!");
+                    printf("\n****************************************************************\n");
+                    Sleep(3000);
                     system("cls");
                     free(ptr);
                     scoreTable(s);
@@ -478,6 +533,8 @@ char openQuestionsFile(){
             if(question == 0){
 
                 printLogo();
+                printf("Trenutacno ste odgovorili %d pitanja i osvojili 0 HRK!\n", question);
+                printf("****************************************************************\n");
                 questRead(9);
                 questRead(10);
                 questRead(11);
@@ -488,16 +545,21 @@ char openQuestionsFile(){
                 if(ans == 'c' || ans == 'C'){
                     
                     system("cls");
-                    printf("Tocan odgovor, osvojili ste 100 HRK");
-                    Sleep(1000);
+                    printLogo();
+                    printf("Tocan odgovor, osvojili ste 100 HRK!");
+                    printf("\n****************************************************************\n");
+                    Sleep(3000);
                     system("cls");
                     free(ptr);
                 }
 
                 else{
                     system("cls");
-                    printf("Krivi odgovor, osvojili ste 0 HRK");
-                    Sleep(1000);
+                    printLogo();
+                    printf("Krivi odgovor, osvojili ste 0 HRK!");
+                    printf("\nTocan odgovor je C");
+                    printf("\n****************************************************************\n");
+                    Sleep(3000);
                     system("cls");
                     free(ptr);
                     scoreTable(s);
@@ -508,6 +570,8 @@ char openQuestionsFile(){
             else if(question == 1){
 
                 printLogo();
+                printf("Trenutacno ste odgovorili %d pitanja i osvojili %d HRK!\n", question, money[question]);
+                printf("****************************************************************\n");
                 questRead(9 + 16);
                 questRead(10 + 16);
                 questRead(11 + 16);
@@ -518,8 +582,10 @@ char openQuestionsFile(){
                 if(ans == 'c' || ans == 'C'){
                     
                     system("cls");
-                    printf("Tocan odgovor, osvojili ste %d HRK", money[question]);
-                    Sleep(1000);
+                    printLogo();
+                    printf("Tocan odgovor, osvojili ste %d HRK!", money[question]);
+                    printf("\n****************************************************************\n");
+                    Sleep(3000);
                     system("cls");
                     free(ptr);
     
@@ -527,8 +593,11 @@ char openQuestionsFile(){
 
                 else{
                     system("cls");
-                    printf("Krivi odgovor, osvojili ste %d HRK", money[question - 1]);
-                    Sleep(1000);
+                    printLogo();
+                    printf("Krivi odgovor, osvojili ste %d HRK!", money[question - 1]);
+                    printf("\nTocan odgovor je C!");
+                    printf("\n****************************************************************\n");
+                    Sleep(3000);
                     system("cls");
                     free(ptr);
                     scoreTable(s);
@@ -538,6 +607,8 @@ char openQuestionsFile(){
             else if(question == 15){
                 
                 printLogo();
+                printf("Trenutacno ste odgovorili %d pitanja i osvojili %d HRK!\n", question, money[question]);
+                printf("****************************************************************\n");
                 questRead(9 + 16 * question);
                 questRead(10 + 16 * question);
                 questRead(11 + 16 * question);
@@ -548,8 +619,10 @@ char openQuestionsFile(){
                 if(ans == 'c' || ans == 'C'){
                     
                     system("cls");
-                    printf("Tocan odgovor, osvojili ste %d HRK", money[question]);
-                    Sleep(1000);
+                    printLogo();
+                    printf("Tocan odgovor, osvojili ste %d HRK!", money[question]);
+                    printf("\n****************************************************************\n");
+                    Sleep(3000);
                     system("cls");
                     free(ptr);
                     scoreTable(s);
@@ -558,8 +631,11 @@ char openQuestionsFile(){
 
                 else{
                     system("cls");
-                    printf("Krivi odgovor, osvojili ste %d HRK", money[question - 1]);
-                    Sleep(1000);
+                    printLogo();
+                    printf("Krivi odgovor, osvojili ste %d HRK!", money[question - 1]);
+                    printf("\nTocan odgovor je C!");
+                    printf("\n****************************************************************\n");
+                    Sleep(3000);
                     system("cls");
                     free(ptr);
                     scoreTable(s);
@@ -570,6 +646,8 @@ char openQuestionsFile(){
             else{
 
                 printLogo();
+                printf("Trenutacno ste odgovorili %d pitanja i osvojili %d HRK!\n", question, money[question]);
+                printf("****************************************************************\n");
                 questRead(9 + 16 * question);
                 questRead(10 + 16 * question);
                 questRead(11 + 16 * question);
@@ -580,8 +658,10 @@ char openQuestionsFile(){
                 if(ans == 'c' || ans == 'C'){
                     
                     system("cls");
-                    printf("Tocan odgovor, osvojili ste %d HRK", money[question]);
-                    Sleep(1000);
+                    printLogo();
+                    printf("Tocan odgovor, osvojili ste %d HRK!", money[question]);
+                    printf("\n****************************************************************\n");
+                    Sleep(3000);
                     free(ptr);
                     system("cls");
     
@@ -589,8 +669,11 @@ char openQuestionsFile(){
 
                 else{
                     system("cls");
-                    printf("Krivi odgovor, osvojili ste %d HRK", money[question - 1]);
-                    Sleep(1000);
+                    printLogo();
+                    printf("Krivi odgovor, osvojili ste %d HRK!", money[question - 1]);
+                    printf("\nTocan odgovor je C");
+                    printf("\n****************************************************************\n");
+                    Sleep(3000);
                     system("cls");
                     free(ptr);
                     scoreTable(s);
@@ -605,6 +688,8 @@ char openQuestionsFile(){
             if(question == 0){
 
                 printLogo();
+                printf("Trenutacno ste odgovorili %d pitanja i osvojili 0 HRK!\n", question);
+                printf("****************************************************************\n");
                 questRead(13);
                 questRead(14);
                 questRead(15);
@@ -615,16 +700,21 @@ char openQuestionsFile(){
                 if(ans == 'd' || ans == 'D'){
                     
                     system("cls");
-                    printf("Tocan odgovor, osvojili ste 100 HRK");
-                    Sleep(1000);
+                    printLogo();
+                    printf("Tocan odgovor, osvojili ste 100 HRK!");
+                    printf("\n****************************************************************\n");
+                    Sleep(3000);
                     system("cls");
                     free(ptr);
                 }
 
                 else{
                     system("cls");
-                    printf("Krivi odgovor, osvojili ste 0 HRK");
-                    Sleep(1000);
+                    printLogo();
+                    printf("Krivi odgovor, osvojili ste 0 HRK!");
+                    printf("\nTocan odgovor je D!");
+                    printf("\n****************************************************************\n");
+                    Sleep(3000);
                     system("cls");
                     free(ptr);
                     scoreTable(s);
@@ -635,6 +725,8 @@ char openQuestionsFile(){
             else if(question == 1){
 
                 printLogo();
+                printf("Trenutacno ste odgovorili %d pitanja i osvojili %d HRK!\n", question, money[question]);
+                printf("****************************************************************\n");
                 questRead(13 + 16);
                 questRead(14 + 16);
                 questRead(15 + 16);
@@ -645,8 +737,10 @@ char openQuestionsFile(){
                 if(ans == 'd' || ans == 'D'){
                     
                     system("cls");
-                    printf("Tocan odgovor, osvojili ste %d HRK", money[question]);
-                    Sleep(1000);
+                    printLogo();
+                    printf("Tocan odgovor, osvojili ste %d HRK!", money[question]);
+                    printf("\n****************************************************************\n");
+                    Sleep(3000);
                     free(ptr);
                     system("cls");
     
@@ -654,8 +748,11 @@ char openQuestionsFile(){
 
                 else{
                     system("cls");
-                    printf("Krivi odgovor, osvojili ste %d HRK", money[question - 1]);
-                    Sleep(1000);
+                    printLogo();
+                    printf("Krivi odgovor, osvojili ste %d HRK!", money[question - 1]);
+                    printf("\nTocan odgovor je D!");
+                    printf("\n****************************************************************\n");
+                    Sleep(3000);
                     system("cls");
                     free(ptr);
                     scoreTable(s);
@@ -665,6 +762,8 @@ char openQuestionsFile(){
             else if(question == 15){
                 
                 printLogo();
+                printf("Trenutacno ste odgovorili %d pitanja i osvojili %d HRK!\n", question, money[question]);
+                printf("****************************************************************\n");
                 questRead(13 + 16 * question);
                 questRead(14 + 16 * question);
                 questRead(15 + 16 * question);
@@ -675,8 +774,10 @@ char openQuestionsFile(){
                 if(ans == 'd' || ans == 'D'){
                     
                     system("cls");
-                    printf("Tocan odgovor, osvojili ste %d HRK", money[question]);
-                    Sleep(1000);
+                    printLogo();
+                    printf("Tocan odgovor, osvojili ste %d HRK!", money[question]);
+                    printf("\n****************************************************************\n");
+                    Sleep(3000);
                     system("cls");
                     free(ptr);
                     scoreTable(s);
@@ -685,8 +786,11 @@ char openQuestionsFile(){
 
                 else{
                     system("cls");
-                    printf("Krivi odgovor, osvojili ste %d HRK", money[question - 1]);
-                    Sleep(1000);
+                    printLogo();
+                    printf("Krivi odgovor, osvojili ste %d HRK!", money[question - 1]);
+                    printf("\nTocan odgovor je D!");
+                    printf("\n****************************************************************\n");
+                    Sleep(3000);
                     system("cls");
                     free(ptr);
                     scoreTable(s);
@@ -697,6 +801,8 @@ char openQuestionsFile(){
             else{
 
                 printLogo();
+                printf("Trenutacno ste odgovorili %d pitanja i osvojili %d HRK!\n", question, money[question]);
+                printf("****************************************************************\n");
                 questRead(13 + 16 * question);
                 questRead(14 + 16 * question);
                 questRead(15 + 16 * question);
@@ -707,8 +813,10 @@ char openQuestionsFile(){
                 if(ans == 'd' || ans == 'D'){
                     
                     system("cls");
-                    printf("Tocan odgovor, osvojili ste %d HRK", money[question]);
-                    Sleep(1000);
+                    printLogo();
+                    printf("Tocan odgovor, osvojili ste %d HRK!", money[question]);
+                    printf("\n****************************************************************\n");
+                    Sleep(3000);
                     free(ptr);
                     system("cls");
     
@@ -716,8 +824,11 @@ char openQuestionsFile(){
 
                 else{
                     system("cls");
-                    printf("Krivi odgovor, osvojili ste %d HRK", money[question - 1]);
-                    Sleep(1000);
+                    printLogo();
+                    printf("Krivi odgovor, osvojili ste %d HRK!", money[question - 1]);
+                    printf("\nTocan odgovor je D!");
+                    printf("\n****************************************************************\n");
+                    Sleep(3000);
                     system("cls");
                     free(ptr);
                     scoreTable(s);
