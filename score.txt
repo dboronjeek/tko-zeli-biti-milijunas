@@ -7,3 +7,4 @@ dopro 500
 zprov 4000
 dra 200
 dino 200
+test 500
