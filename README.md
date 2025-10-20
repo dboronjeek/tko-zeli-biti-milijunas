@@ -62,10 +62,6 @@
 * Uses standard libraries for input/output and file handling.
 * No external dependencies.
 
-## License
-
-This project is licensed under [your license].
-
 ## Contact
 
 For more information or questions, contact the author via GitHub: [dboronjeek](https://github.com/dboronjeek).
